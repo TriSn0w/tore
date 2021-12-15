@@ -1,0 +1,19 @@
+{
+  "name": "tore.js",
+  "version": "1.0.1",
+  "description": "Tore is a package that builds off of JavaScript and other packages, making it really easy to use for web servers, discord bots, and more!",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "discord.js": "^12.5.3",
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "node-fetch": "^2.6.6",
+    "prompts": "^2.4.2",
+    "regifetch": "^1.0.1-minor"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "fireyjs",
+  "license": "ISC"
+}
