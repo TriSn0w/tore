@@ -1,5 +1,5 @@
 # Say hello to `Tore!`
-Tore is a wrapper of JavaScript that builds off of other npm packages(And JavaScript), making it really easy to use for web servers, discord bots, and more!
+Tore is a packages that builds off of other packages(and makes them easier), making Tore really easy to use for web servers, discord bots, and more!
 
 ### Table of Contents:
 [What is included?](#what-is-included)</br>
@@ -11,7 +11,6 @@ Tore is a wrapper of JavaScript that builds off of other npm packages(And JavaSc
 You get:
 - A Discord API (discord.js)
 - A user input system (prompts)
-- A better way to use [classes](https://www.w3schools.com/js/js_classes.asp)(without `constructor()`)
 - A way to make web servers (express)
 - A interface for fetching resources on websites (node-fetch)
 #### **And more to come in the near future!**
@@ -66,38 +65,32 @@ log(colors.green('i should be green'))
 log(colors.america('good old usa!!!'))
 ```
 
-### [Web Server (Express)](https://npmjs.com/express)
+### [Web Server](https://npmjs.com/express)
 ```js
-const { log, server } = require('tore.js')
+const { startServer, addServerPage, console } = require('./index.js')
 
-const app = server()
+startServer(3000)
 
-app.get('/', (req, res) => {
-res.send('Hello World!')
-})
-
-app.listen(3000, () => {
-log('Server is on!')
+addServerPage('/', (req, res) => {
+  res.send('Hello World')
 })
 ```
 
 ### [Discord Bot]('https://npmjs.com/discord.js')
 ```js
-const { discord } = require('tore.js');
+const { discord } = require('./index.js')
+const client = discord()
 
-// Initialize Discord Bot
 
-var client = new discord.Client();
-
-client.on('ready', () {
-log('Logged in as: ' + client.user.tag);
-});
-
-client.on('message', message => {
-if (message.content == "ping") {
-message.channel.send('pong')
-}
+client.on('ready', () => {
+  console.log('ready')
 })
+
+client.on('message', msg => {
+  console.log(msg.content)
+})
+
+client.login(token)
 ```
 [Go to the discord.js docs for documentation](https://discord.js.org)
 
@@ -125,6 +118,5 @@ log(test.ping)
 
 # Why Tore is easy to learn
 1. It is based off of JavaScript, which pretty much easy to learn.
-2. It shortens JavaScript functions, like `console.log()` into just `log()`, AND has other npm packages added into Tore as "modules".
-3. There are [alot of other sources of documentation](#examples) for every single module.
-4. It's also adds features weekly!
+2. There are [alot of other sources of documentation](#examples) for every single module.
+3. It's also adds features weekly!
