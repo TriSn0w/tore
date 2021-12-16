@@ -1,10 +1,20 @@
 # Say hello to `Tore!`
-Tore is a package that builds off of JavaScript and other packages, making it really easy to use for web servers, discord bots, and more!
+Tore is a wrapper of JavaScript that builds off of other npm packages(And JavaScript), making it really easy to use for web servers, discord bots, and more!
 
 ### Table of Contents:
+[What is included?](#what-is-included)</br>
 [How do I start?](#how-do-i-start)</br>
 [Examples](#examples)
 
+
+# What is included?
+You get:
+- A Discord API (discord.js)
+- A user input system (prompts)
+- A better way to use [classes](https://www.w3schools.com/js/js_classes.asp)(without `constructor()`)
+- A way to make web servers (express)
+- A interface for fetching resources on websites (node-fetch)
+#### **And more to come in the near future!**
 
 # How do I start?
 Just add this to your code if you want to enable everything:
