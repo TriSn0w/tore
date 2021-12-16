@@ -110,6 +110,9 @@ test.ping = 'pong'
 
 log(test.ping)
 ```
+
+**Note: OTHER MODULE EXAMPLES NOT INCLUDED HERE CAN BE EASILY FOUND IN THE OFFICIAL [node.js docs](https://nodejs.org/en/docs/)**
+
 # Why Tore is easy to learn
 1. It is based off of JavaScript, which pretty much easy to learn.
 2. It shortens JavaScript functions, like `console.log()` into just `log()`, AND has other npm packages added into Tore as "modules".
